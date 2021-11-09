@@ -35,7 +35,8 @@ class Solution {
 
 //BRUTE FORCE APPROACH
 
-/*class Solution {
+/*
+class Solution {
     public int[] twoSum(int[] nums, int target) {
         
         int arr[] = new int[2];
@@ -55,5 +56,37 @@ class Solution {
         }
         
         return arr; 
-    }*/
+    }
+    */
+
+
+//OPTIMISED SOLUTION
+
+/*
+ 
+ class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        //use map to store array elements
+        Map<Integer,Integer> map = new HashMap<>();
+        
+        for(int i=0;i<nums.length;i++)
+        {
+          //before inserting into the map try to find if the difference of the target and the current number is already in map
+            if(map.containsKey(target - nums[i]))
+            {
+			//if yes return 
+               return new int[]{map.get(target - nums[i]),i};                   
+            }
+            //if not insert into the map
+              map.put(nums[i],i);
+        }
+        
+      
+        
+        return null;
+        
+    }
+}
+*/
 }
