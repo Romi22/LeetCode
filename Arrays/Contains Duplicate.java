@@ -15,3 +15,29 @@ class Solution {
         return false;
     }
 }
+
+
+//2. Using set (we can use hashset as well)
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        
+        int length = nums.length;
+        
+        Set<Integer> set = new TreeSet<>();
+        
+        for(int i: nums)
+        {
+            set.add(i);
+        }
+        
+        if(set.size() == nums.length)
+            return false;
+        else
+            return true;
+    }
+}
+
+//3. Using Map
+
+
