@@ -94,3 +94,18 @@ class Solution {
             }
     }
 }
+
+
+NOTE:
+
+here we can just check for the values left in nums2 , what if we read whole nums1 arr and still few elements are remaining in nums2.
+
+e.g. - nums1 : [6,7,8,9,0,0,0,0] nums2 : [1,2,3,4]
+
+while we remain on index 3 of nums2 all the elements of nums1 has been addressed, i will become 0 and our condition in first while loop which is merging
+elements becomes false, we will still have elements to cover in nums2.
+
+vice versa : if all the elements of nums2 have been read and still there are elements in nums1 no need to worry as the elements are already sorted since 
+we are placing them in nums1 itself test cases will still pass.
+
+Also it is mentioned /**  sorted in non-decreasing order */ that is more important. Logic will change if arrays are not sorted.
